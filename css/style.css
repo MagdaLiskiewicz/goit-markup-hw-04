@@ -300,10 +300,6 @@ p {
   background-color: #404bbf;
 }
 
-.socials-link:active {
-  background-color: #404bbf;
-}
-
 .socials-logo {
   fill: #f4f4fd;
 }
@@ -431,10 +427,6 @@ p {
 .socials-link-footer:focus {
   background-color: #31d0aa;
 }
-
-/* .socials-link-footer:active {
-  background-color: #31d0aa;
-} */
 
 .socials-icon {
   fill: #f4f4fd;
