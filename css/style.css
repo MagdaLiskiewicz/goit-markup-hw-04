@@ -73,6 +73,11 @@ p {
   color: #2e2f42;
 }
 
+.current {
+  position: relative;
+  color: #404bbf;
+}
+
 .link {
   font-weight: 500;
   line-height: 1.5;
@@ -85,6 +90,17 @@ p {
 .link:hover,
 .link:focus {
   color: #404bbf;
+}
+
+.current:active::after {
+  content: '';
+  width: 100%;
+  height: 4px;
+  border-radius: 2px;
+  background-color: #404bbf;
+  position: absolute;
+  left: 0;
+  top: 68px;
 }
 
 .contact-link {
@@ -114,10 +130,20 @@ p {
 }
 
 .background {
-  background-color: #2e2f42;
   padding: 188px 0;
   text-align: center;
+  max-width: 1440px;
+  width: 100%;
+  background-image: linear-gradient(
+      rgba(46, 47, 66, 0.7),
+      rgba(46, 47, 66, 0.7)
+    ),
+    url('../images/people-office.jpg');
+  background-size: cover;
+  background-position: no-repeat;
+  margin: auto;
 }
+
 .title {
   font-weight: 700;
   font-size: 56px;
@@ -169,6 +195,18 @@ p {
   display: flex;
 }
 
+.icons-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f4f4fd;
+  border: 1px solid #8e8f99;
+  border-radius: 4px;
+  width: 264px;
+  padding: 24px 100px;
+  margin-bottom: 8px;
+}
+
 .goal {
   width: calc((100% - 72px) / 4);
 }
@@ -185,6 +223,7 @@ p {
 .background-team {
   background: #f4f4fd;
 }
+
 .header-titles {
   font-weight: 700;
   font-size: 36px;
@@ -195,6 +234,7 @@ p {
   color: #2e2f42;
   margin-bottom: 72px;
 }
+
 .goal-text {
   line-height: 1.5;
   letter-spacing: 0.02em;
@@ -203,6 +243,8 @@ p {
 .card {
   background-color: #fff;
   border-radius: 0 0 4px 4px;
+  box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08),
+    0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
 }
 
 .person-list {
@@ -210,7 +252,7 @@ p {
 }
 
 .person-description {
-  padding: 32px 0;
+  padding: 32px 16px;
 }
 
 .person {
@@ -222,6 +264,30 @@ p {
   line-height: 1.5;
   letter-spacing: 0.02em;
   text-align: center;
+  margin-bottom: 8px;
+}
+
+.socials-list {
+  justify-content: space-between;
+}
+
+.socials-link {
+  width: 40px;
+  height: 40px;
+  background-color: #4d5ae5;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 250ms cubic(0.4, 0, 0.2, 1) 0s;
+}
+
+.socials-link:hover {
+  background-color: #404bbf;
+}
+
+.socials-logo {
+  fill: #f4f4fd;
 }
 
 .portfolio-list {
@@ -233,6 +299,44 @@ p {
 
 .portfolio-card {
   width: calc((100% - 48px) / 3);
+  position: relative;
+  box-shadow: none;
+}
+
+.portfolio-card:hover,
+.portfolio-card:focus {
+  box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08),
+    0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
+}
+
+.trans-box {
+  position: relative;
+  overflow: hidden;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #4d5ae5;
+  transform: translateY(100%);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.img-transition:hover .overlay,
+.img-transition:focus .overlay {
+  transform: translateY(0);
+}
+
+.text-overlay {
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: #f4f4fd;
+  padding-top: 40px;
+  padding-right: 32px;
+  padding-left: 32px;
 }
 
 .item-portfolio {
@@ -261,6 +365,13 @@ p {
   padding-top: 100px;
   padding-bottom: 100px;
 }
+
+.footer-container {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+}
+
 .logo-studio-footer {
   color: #f4f4fd;
 }
@@ -275,4 +386,39 @@ p {
 .footer .logo {
   display: inline-block;
   margin-bottom: 16px;
+}
+
+.footer-logo {
+  margin-right: 120px;
+}
+
+.text-social {
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: #fff;
+  margin-bottom: 16px;
+}
+
+.socials-list-footer {
+  gap: 16px;
+}
+
+.socials-link-footer {
+  width: 40px;
+  height: 40px;
+  background-color: #4d5ae5;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 250ms cubic(0.4, 0, 0.2, 1) 0s;
+}
+
+.socials-link-footer:hover {
+  background-color: #31d0aa;
+}
+
+.socials-icon {
+  fill: #f4f4fd;
 }
