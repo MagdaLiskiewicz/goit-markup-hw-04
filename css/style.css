@@ -300,6 +300,10 @@ p {
   background-color: #404bbf;
 }
 
+.socials-link:active {
+  background-color: #404bbf;
+}
+
 .socials-logo {
   fill: #f4f4fd;
 }
@@ -420,11 +424,15 @@ p {
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: background-color 250ms cubic(0.4, 0, 0.2, 1) 0s;
+  transition: background-color 250ms cubic(0.4, 0, 0.2, 1);
 }
 
 .socials-link-footer:hover,
 .socials-link-footer:focus {
+  background-color: #31d0aa;
+}
+
+.socials-link-footer:active {
   background-color: #31d0aa;
 }
 
